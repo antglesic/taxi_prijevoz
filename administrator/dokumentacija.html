@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="hr">
+    <head>
+        <title>Dokumentacija</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="naslov" content="Dokumentacija" />
+        <meta name="kljucne_rijeci" content="projekt, dokumentacija, taxi-prijevoz" />
+        <meta name="datum_izrade" content="25.05.2017." />
+        <meta name="autor" content="Antonio Glešić" />
+        <link rel="stylesheet" type="text/css" href="css/antglesic.css">
+    </head>
+    <body>
+        <header id="top">
+            <figure class="header">
+                <img src="slike/logo.png" width="400" height="100" alt="LOGO" usemap="#mapa1"/>
+                <map name="mapa1">
+                    <area href="index.html" shape="rect" alt="pravokutnik" coords="0,0,200,100" target="a" />
+                    <area href="#sadrzaj" shape="rect" alt="pravokutnik2" coords="200,0,400,100" />
+                </map>
+                <figcaption class="figcaption">Logo</figcaption>
+            </figure>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.php?odjava=0">Naslovnica</a>  
+                </li>
+                <li>
+                    <a href="index_kor.php?odjava=0">Funkcije korisnika</a>
+                </li>
+                <li>
+                    <a href="index_mod.php?odjava=0">Mod tools</a>  
+                </li>
+                <li>
+                    <a href="index_admin.php?odjava=0">Admin tools</a>
+                </li>
+                <li>
+                    <a href="podrucja.php">Popis područja</a>
+                </li>
+                <li>
+                    <a href="o_autoru.html">O autoru</a>
+                </li>
+                <li>
+                    <a href="dokumentacija.html" class="active">Dokumentacija</a>
+                </li>
+                <li>
+                    <a href="index.php?odjava=1">Odjava</a>
+                </li>
+            </ul>
+        </nav>
+        <section>
+            <h2>Taxi prijevoz</h2>
+            <p>Tema ovog projektnog zadatka je bila napraviti web-aplikaciju koja omogućava korisnicima rezervaciju taxi prijevoza.</p>
+            <p>Uz rezervaciju, korisnici imaju mogućnost sakupljanja bodova kroz razne akcije unutar aplikacije te korištenje istih za kupovinu kupona za popust.</p>
+            <div class="break"><br><br></div>
+            <p>Ova aplikacija na kojoj se trenutno nalazite je programsko rješenje gore navedenog projektnog zadatka.</p>
+            <p>Ima mogućnosti svih modernih web-aplikacija kao što je registracija i prijava korisnika, a registrirani korisnici nakon prijave mogu rezervirati prijevoz i trošiti sakupljene bodove na kupovinu kupona.</p>
+            <div class="break"><br><br></div>
+            <h2>Use Case dijagram</h2>
+            <figure>
+                <img src="slike/UseCase.png" alt="usecase" />
+            </figure>
+            <div class="break"><br><br></div>
+            <h2>Shema baze podataka</h2>
+            <figure>
+                <img src="slike/Baza.png" alt="era" />
+            </figure>
+            <div class="break"><br><br></div>
+            <h2>Navigacijski dijagram</h2>
+            <figure>
+                <img src="slike/navigacijski.jpg" alt="nav" />
+            </figure>
+            <div class="break"><br><br></div>
+            <h2>Ova se aplikacija sastoji od idućih php skripata:</h2>
+            <dl>
+                <dt>index.php</dt><dd>Ujedno služi kao naslovnica, ali i za preusmjeravanje na određen dio aplikacije ovisno o ulozi korisnika te se koristi i za odjavu istog</dd>
+                <dt>podrucja.php</dt><dd>Korisnik može vidjeti sva područja i njihove moderatore</dd>
+                <dt>prijava.php</dt><dd>Skripta pomoću koje se korisnik prijavljuje u aplikaciju</dd>
+                <dt>registracija.php</dt><dd>Skripta za registraciju novih korisnika</dd>
+                <dt>aktivacija.php</dt><dd>Skripta za aktivaciju računa novog korisnika nakon pritiska na aktivacijski link</dd>
+                <dt>baza.class.php</dt><dd>Klasa za rad sa bazom podataka</dd>
+                <dt>sesija.class.php</dt><dd>Klasa za kreiranje i rad sa sesijama</dd>
+                <dt>zaboravljena_lozinka.php</dt><dd>Skripta koja generira novu lozinku korisniku ukoliko je zaboravio staru</dd>
+                <dt>evidencija_bodova.php</dt><dd>Korisnik može pratiti sakupljene i potrošene bodove unutar aplikacije</dd>
+                <dt>odabir_podrucja.php</dt><dd>Prije same rezervacije prijevoza, korisnik odabire područje i preusmjerava ga na daljnju rezervaciju</dd>
+                <dt>rezervacija.php</dt><dd>Skripta koja preuzima područje iz prethodne skripte te omogućava korisniku rezervaciju prijevoza</dd>
+                <dt>kuponi.php</dt><dd>Prikaz korisniku dostupnih kupona te mogućnost stavljanja istih u košaricu</dd>
+                <dt>kosarica.php</dt><dd>Mogućnost kupovine kupona unutar košarice ili izbacivanje kupona iz iste</dd>
+                <dt>povratna.php</dt><dd>Korisnik može poslati povratnu informaciju za svaki odrađen prijevoz</dd>
+                <dt>novo_podrucje.php</dt><dd>Administrator kreira novo područje i dodjeljuje mu moderatora</dd>
+                <dt>novi_kupon.php</dt><dd>Administrator kreira novi kupon</dd>
+                <dt>statistika.php</dt><dd>Pregled statistike lojalnosti korisnika aplikacije</dd>
+                <dt>dnevnik.php</dt><dd>Ispis svih događaja koji su se dogodili unutar aplikacije</dd>
+                <dt>izgled_admin.php</dt><dd>Administrator može mijenjati izgled aplikacije za sebe</dd>
+                <dt>otkljucavanje_korisnika.php</dt><dd>Administrator ima mogućnost otključavanja računa korisnika koji čiji je račun bio zaključan zbog previše neuspješnih pokušaja prijave</dd>
+                <dt>definiranje_ulica.php</dt><dd>Moderator definira polazišne točke ili ulice za prijevoz</dd>
+                <dt>definiranje_kupona.php</dt><dd>Moderator definira cijenu i ostale podatke za novo kreiran kupon</dd>
+                <dt>prijevoz.php</dt><dd>Moderator označava prijevoz odrađenim ili neodrađenim</dd>
+                <dt>provjera_kupona.php</dt><dd>Provjeravanje generiranog koda kupona prilikom kupnje istog</dd>
+                <dt>rezervacije.php</dt><dd>Moderator može prihvatiti ili odbiti rezervaciju prijevoza</dd>
+                <dt>izgled.php</dt><dd>Moderator mijenja izgled aplikacije za svoje područje</dd>
+                <dt>korisnici.php</dt><dd>U direktoriju 'privatno' se pomoću ove skripte ispisuju svi korisnici aplikacije i njihove informacije</dd>
+            </dl>
+            <div class="break"><br><br></div>
+            <h2>Mapa mjesta:</h2>
+            <dl>
+                <dt>Naslovnica</dt><dd>-></dd>
+                <dd>Područja</dd><dd>Prijava</dd><dd>Registracija</dd><dd>O autoru</dd><dd>Dokumentacija</dd>
+                <dt>Korisnik</dt><dd>-></dd>
+                <dd>Rezervacija</dd><dd>Bodovi</dd><dd>Povratna informacija</dd><dd>Kuponi</dd>
+                <dt>Moderator</dt><dd>-></dd>
+                <dd>Definiranje kupona</dd><dd>Provjera kupona</dd><dd>Izgled stranice</dd><dd>Definiranje ulica</dd><dd>Rezervacije</dd><dd>Prijevoz</dd>
+                <dt>Administrator</dt><dd>-></dd>
+                <dd>Novo područje</dd><dd>Novi kupon</dd><dd>Statistika</dd><dd>Dnevnik</dd><dd>Izgled</dd>
+                <dt>Privatno</dt><dd>-></dd>
+                <dd>Korisnici</dd>
+            </dl>
+            <div class="break"><br><br></div>
+            <h2>Korištene tehnologije:</h2>
+            <dl>
+                <dt>HTML</dt><dd>HTML je kratica za HyperText Markup Language, što znači prezentacijski jezik za izradu web stranica</dd>
+                <dt>CSS</dt><dd>CSS je kratica od (eng.) Cascading Style Sheets. Radi se stilskom jeziku, koji se rabi za opis prezentacije dokumenta napisanog pomoću markup (HTML) jezika</dd>
+                <dt>PHP</dt><dd>PHP se ističe širokom podrškom raznih baza podataka i internet protokola kao i raspoloživosti brojnih programerskih knjižnica</dd>
+                <dt>JAVASCRIPT</dt><dd>JavaScript je skriptni programski jezik, koji se izvršava u web pregledniku na strani korisnika</dd>
+                <dt>MYSQL</dt><dd>MySQL je besplatan, open source sustav za upravljanje bazom podataka</dd>
+                <dt>MYSQL WORKBENCH</dt><dd>Softver za izradu modela baze podataka i sql skripata</dd>
+            </dl>
+            <div class="break"><br><br></div>
+            <h2>Vanjski izvori:</h2>
+            <ul>
+                <li>
+                    W3Schools.com
+                </li>
+                <li>
+                    Stackoverflow.com
+                </li>
+                <li>
+                    Php.net
+                </li>
+            </ul>
+            <div class="break"><br><br></div>
+            <h2>Opis završenosti projekta:</h2>
+            <p>Projekt nije u potpunosti dovršen. Nisu implementirane CRUD kontrole za administratora nad svim tablicama u bazi podataka. Uz to, nije implementirano virtualno vrijeme.</p>
+            <p>Nije implementirano dijeljenje sadržaja na društvene mreže od strane korisnika te kod kupovine kupona, galerija slika kupona nije sortirana.</p>
+            <p>Uz to, nije korišten AJAX i nisu implementirane neke posebne osobine kao što je to Smarty, Angular, SEO, SQL zaštita...</p>
+            <p>Kod tabelarnog prikaza (dnevnik, statistika, itd.) korištene su datatables biblioteke, a ne vlastito rješenje...</p>
+            <div class="break"><br><br></div>
+            <h2>Uočeni problemi:</h2>
+            <p>Direktorij privatno je preko HTTPS-a dostupan odmah, a tek preko HTTP-a traži korisnika unos korisničkog imena i lozinke.</p>
+            <p>Košarica nije u potpunosti optimizirana za rad ukoliko korisnik odluči kupiti više kupona istovremeno, ali radi savršeno sa jednim te se preporuča kupnja jednog po jednog kupona.</p>
+            <p>Korisnik sakuplja bodove prilikom svake prijave u sustav te može konstantno se prijavljivati i odjavljivati te tako skupiti velike količine bodova.</p>
+            <div class="break"><br><br></div>
+        </section>
+        <footer id="footer">
+            <figure class="foot1">
+                <img src="slike/HTML5.png" alt="HTML 5 validator" width="50" usemap="#mapa2" />
+                <map name="mapa2">
+                    <area href="https://validator.w3.org/check?uri=http://barka.foi.hr/WebDiP/2016/zadaca_01/antglesic/index.html" shape="rect" alt="pravokutnik" coords="0,0,50,50" target="a" />
+                </map>
+                <figcaption>HTML5 validator</figcaption>
+            </figure>
+            <figure class="foot1">
+                <img src="slike/CSS3.png" alt="CSS3 validator" width="50" usemap="#mapa3"/>
+                <map name="mapa3">
+                    <area href="https://jigsaw.w3.org/css-validator/validator?uri=http://barka.foi.hr/WebDiP/2016/zadaca_01/antglesic/antglesic.css" shape="rect" alt="pravokutnik" coords="0,0,50,50" target="a" />
+                </map>
+                <figcaption>CSS3 validator</figcaption>
+            </figure>
+            <address class="foot2">
+                <strong>Kontakt:</strong> <a href="mailto:antglesic@foi.hr">Antonio Glešić</a>
+            </address>
+            <p class="foot2"><small>&copy;</small> 2017. A. Glešić</p>
+        </footer>
+    </body>
+</html>
